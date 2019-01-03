@@ -1,6 +1,6 @@
 {
   "name": "@cfn-modules/nlb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Network load balancer.",
   "author": "Michael Wittig <michael@widdix.de>",
   "license": "Apache-2.0",
