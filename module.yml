@@ -14,7 +14,7 @@
 # limitations under the License.
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'cfn-modules: NLB'
-# cfn-modules:implements(ExposeArn, ExposeDnsName)
+# cfn-modules:implements(ExposeArn, LoadBalancer)
 Parameters:
   VpcModule:
     Description: 'Stack name of vpc module.'
@@ -50,7 +50,7 @@ Outputs:
   ModuleId:
     Value: 'nlb'
   ModuleVersion:
-    Value: '1.0.0'
+    Value: '1.0.1'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:

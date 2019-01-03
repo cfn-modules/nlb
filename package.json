@@ -1,10 +1,10 @@
 {
   "name": "@cfn-modules/nlb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Network load balancer.",
   "author": "Michael Wittig <michael@widdix.de>",
   "license": "Apache-2.0",
-  "keywords": ["cfn-modules", "cfn-modules:ExposeArn", "cfn-modules:ExposeDnsName"],
+  "keywords": ["cfn-modules", "cfn-modules:ExposeArn", "cfn-modules:LoadBalancer"],
   "homepage": "https://github.com/cfn-modules",
   "bugs": {
     "url": "https://github.com/cfn-modules/nlb/issues"

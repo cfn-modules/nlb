@@ -20,7 +20,7 @@ npm i @cfn-modules/nlb
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'cfn-modules example'
 Resources:
-  NLB:
+  Nlb:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
       Parameters:
