@@ -25,6 +25,7 @@ Resources:
     Properties:
       Parameters:
         VpcModule: !GetAtt 'Vpc.Outputs.StackName' # required
+        BucketModule: '' # optional
         Scheme: 'internet-facing' # optional
         CrossZone: 'false' # optional
       TemplateURL: './node_modules/@cfn-modules/nlb/module.yml'
@@ -43,11 +44,18 @@ Resources:
     </tr>
   </thead>
   <tbody>
-    tr>
+    <tr>
       <td>VpcModule</td>
       <td>Stack name of <a href="https://www.npmjs.com/package/@cfn-modules/vpc">vpc module</a></td>
       <td></td>
       <td>yes</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>BucketModule</td>
+      <td>Stack name of <a href="https://www.npmjs.com/package/@cfn-modules/s3-bucket">S3 bucket module</a></td>
+      <td></td>
+      <td>no</td>
       <td></td>
     </tr>
     <tr>
