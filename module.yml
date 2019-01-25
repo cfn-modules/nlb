@@ -19,6 +19,10 @@ Parameters:
   VpcModule:
     Description: 'Stack name of vpc module.'
     Type: String
+  BucketModule:
+    Description: 'Optional but recommended stack name of s3-bucket module to store access logs.'
+    Type: String
+    Default: ''
   Scheme:
     Description: 'Indicates whether the load balancer reachable from the public Internet or only from within the VPC.'
     Type: String
@@ -32,6 +36,7 @@ Parameters:
     Default: 'false'
     AllowedValues: ['true', 'false']
 Conditions:
+  HasBucketModule: !Not [!Equals [!Ref BucketModule, '']]
   HasSchemeInternal: !Equals [!Ref Scheme, 'internal']
 Resources:
   LoadBalancer:
@@ -40,6 +45,10 @@ Resources:
       LoadBalancerAttributes:
       - Key: 'load_balancing.cross_zone.enabled'
         Value: !Ref CrossZone
+      - Key: 'access_logs.s3.enabled'
+        Value: !If [HasBucketModule, 'true', 'false']
+      - !If [HasBucketModule, {Key: 'access_logs.s3.prefix', Value: !Ref 'AWS::StackName'}, !Ref 'AWS::NoValue']
+      - !If [HasBucketModule, {Key: 'access_logs.s3.bucket', Value: {'Fn::ImportValue': !Sub '${BucketModule}-Name'}}, !Ref 'AWS::NoValue']
       Scheme: !Ref Scheme
       Subnets: !If
       - HasSchemeInternal
@@ -50,7 +59,7 @@ Outputs:
   ModuleId:
     Value: 'nlb'
   ModuleVersion:
-    Value: '1.0.2'
+    Value: '1.1.0'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
