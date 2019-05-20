@@ -31,6 +31,17 @@ Resources:
       TemplateURL: './node_modules/@cfn-modules/nlb/module.yml'
 ```
 
+## Examples
+
+none
+
+## Related modules
+
+* [ecs-nlb-listener-and-target](https://github.com/cfn-modules/ecs-nlb-listener-and-target)
+* [fargate-service](https://github.com/cfn-modules/fargate-service)
+* [lb-dns-record](https://github.com/cfn-modules/lb-dns-record)
+* [alb](https://github.com/cfn-modules/alb)
+
 ## Parameters
 
 <table>
