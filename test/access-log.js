@@ -16,11 +16,9 @@ test.serial('access-log', async t => {
       t.log(await cfntest.deleteStack(stackName));
     } catch (err) {
       if (accessLogBucketName != null) {
-        t.log(await cfntest.emptyBucket(outputs.AccessLogBucketName));
-        t.log(await cfntest.deleteStack(stackName));
-      } else {
-        throw err;
+        t.log(await cfntest.emptyBucket(accessLogBucketName));
       }
+      t.log(await cfntest.deleteStack(stackName));
     }
     t.pass();
   }
