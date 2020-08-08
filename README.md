@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/cfn-modules/nlb.svg?branch=master)](https://travis-ci.org/cfn-modules/nlb)
-[![NPM version](https://img.shields.io/npm/v/@cfn-modules/nlb.svg)](https://www.npmjs.com/package/@cfn-modules/nlb)
-
 # cfn-modules: NLB
 
 Network load balancer.
