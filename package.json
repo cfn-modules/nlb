@@ -4,13 +4,17 @@
   "description": "Network load balancer.",
   "author": "Michael Wittig <michael@widdix.de>",
   "license": "Apache-2.0",
-  "keywords": ["cfn-modules", "cfn-modules:ExposeArn", "cfn-modules:LoadBalancer"],
+  "keywords": [
+    "cfn-modules",
+    "cfn-modules:ExposeArn",
+    "cfn-modules:LoadBalancer"
+  ],
   "homepage": "https://github.com/cfn-modules",
   "bugs": {
     "url": "https://github.com/cfn-modules/nlb/issues"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/cfn-modules/nlb.git"
+    "type": "git",
+    "url": "https://github.com/cfn-modules/nlb.git"
   }
 }
